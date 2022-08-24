@@ -1,0 +1,17 @@
+{
+  "name": "roxi",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --minify --target=esnext --format=esm --outfile=dist/index.js",
+    "check": "tsc",
+    "dev": "wrangler dev --local",
+    "start": "wrangler publish"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@types/replacestream": "^4.0.1",
+    "esbuild": "^0.15.3",
+    "typescript": "^4.7.4",
+    "wrangler": "^2.0.25"
+  }
+}

@@ -1,0 +1,18 @@
+name = "roxi"
+account_id = "864cdf76f8254fb5539425299984d766"
+compatibility_date = "2022-08-16"
+main = "dist/index.js"
+route = { pattern = "roxi.cloudflare.community/*", zone_id = "3c64a34e26b07a72bd3d3d3172d4c631" }
+
+r2_buckets  = [
+  { binding = "R2", bucket_name = "prod", preview_bucket_name = "prod" }
+]
+
+[build]
+command = "pnpm build"
+watch_dir = "src"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "b54534bcb1b249249357548d0fe65076"
+preview_id = "b54534bcb1b249249357548d0fe65076"
