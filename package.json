@@ -5,7 +5,7 @@
     "build": "esbuild src/index.ts --bundle --minify --target=esnext --format=esm --outfile=dist/index.js",
     "check": "tsc",
     "dev": "wrangler dev --local",
-    "start": "wrangler publish"
+    "publish": "wrangler publish"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.14.1",
